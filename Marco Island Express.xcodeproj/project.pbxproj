@@ -7,18 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E12CBB762B5B525A00B79FB8 /* MKMapRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12CBB752B5B525A00B79FB8 /* MKMapRect.swift */; };
+		E12CBB782B5CBB2B00B79FB8 /* RideDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12CBB772B5CBB2B00B79FB8 /* RideDetailsModel.swift */; };
+		E12CBB7A2B5CBED800B79FB8 /* CarSeatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12CBB792B5CBED800B79FB8 /* CarSeatType.swift */; };
+		E12CBB7C2B5CBF0300B79FB8 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12CBB7B2B5CBF0300B79FB8 /* VehicleType.swift */; };
+		E12CBB7E2B5CC02800B79FB8 /* VehicleSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12CBB7D2B5CC02800B79FB8 /* VehicleSelection.swift */; };
+		E12CBB802B5CC43100B79FB8 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12CBB7F2B5CC43100B79FB8 /* Double.swift */; };
 		E17F667C2B50C47E0085FE81 /* Marco_Island_ExpressApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F667B2B50C47E0085FE81 /* Marco_Island_ExpressApp.swift */; };
-		E17F667E2B50C47E0085FE81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F667D2B50C47E0085FE81 /* ContentView.swift */; };
 		E17F66802B50C47F0085FE81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17F667F2B50C47F0085FE81 /* Assets.xcassets */; };
 		E17F66832B50C47F0085FE81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17F66822B50C47F0085FE81 /* Preview Assets.xcassets */; };
+		E17F668A2B50C5680085FE81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E17F66892B50C5680085FE81 /* GoogleService-Info.plist */; };
+		E17F668F2B50C5EA0085FE81 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E17F668E2B50C5EA0085FE81 /* FirebaseAnalytics */; };
+		E17F66912B50C5EA0085FE81 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E17F66902B50C5EA0085FE81 /* FirebaseAuth */; };
+		E17F66932B50C5EA0085FE81 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = E17F66922B50C5EA0085FE81 /* FirebaseCrashlytics */; };
+		E17F66952B50C5EA0085FE81 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E17F66942B50C5EA0085FE81 /* FirebaseFirestore */; };
+		E17F66972B50C5EA0085FE81 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = E17F66962B50C5EA0085FE81 /* FirebaseMessaging */; };
+		E17F66992B50C8DE0085FE81 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F66982B50C8DE0085FE81 /* HomeView.swift */; };
+		E17F669B2B50C91A0085FE81 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F669A2B50C91A0085FE81 /* LoginView.swift */; };
+		E17F669D2B50CF090085FE81 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F669C2B50CF090085FE81 /* CustomTextField.swift */; };
+		E17F669F2B50D45E0085FE81 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F669E2B50D45E0085FE81 /* GradientButton.swift */; };
+		E17F66A12B5102C80085FE81 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F66A02B5102C80085FE81 /* SignupView.swift */; };
+		E17F66A32B51F2680085FE81 /* Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F66A22B51F2680085FE81 /* Drawer.swift */; };
+		E17F66A52B51F4FE0085FE81 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F66A42B51F4FE0085FE81 /* MenuButton.swift */; };
+		E17F66A72B51F5E10085FE81 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F66A62B51F5E10085FE81 /* MenuModel.swift */; };
+		E17F66AC2B5239400085FE81 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F66AB2B5239400085FE81 /* SettingsView.swift */; };
+		E17F66AE2B52394D0085FE81 /* RidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F66AD2B52394D0085FE81 /* RidesView.swift */; };
+		E17F66B02B5239610085FE81 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F66AF2B5239610085FE81 /* BookView.swift */; };
+		E1DD4E0E2B530DB7005CD295 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E0D2B530DB7005CD295 /* Color.swift */; };
+		E1DD4E122B532DE7005CD295 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E112B532DE7005CD295 /* ActionButton.swift */; };
+		E1DD4E142B533317005CD295 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E132B533317005CD295 /* UserModel.swift */; };
+		E1DD4E172B53340C005CD295 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E162B53340C005CD295 /* User.swift */; };
+		E1DD4E192B5344A7005CD295 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E182B5344A7005CD295 /* RootView.swift */; };
+		E1DD4E1B2B536F56005CD295 /* LocationSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E1A2B536F56005CD295 /* LocationSearchModel.swift */; };
+		E1DD4E1D2B5370B4005CD295 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E1C2B5370B4005CD295 /* SearchView.swift */; };
+		E1DD4E212B5371BC005CD295 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E202B5371BC005CD295 /* SearchField.swift */; };
+		E1DD4E232B5371E5005CD295 /* SearchUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E222B5371E5005CD295 /* SearchUserState.swift */; };
+		E1DD4E262B5372B4005CD295 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E252B5372B4005CD295 /* LocationSearchResultCell.swift */; };
+		E1DD4E282B537587005CD295 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E272B537587005CD295 /* MapView.swift */; };
+		E1DD4E2A2B537615005CD295 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E292B537615005CD295 /* SearchButton.swift */; };
+		E1DD4E2C2B5378DD005CD295 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E2B2B5378DD005CD295 /* MapViewState.swift */; };
+		E1DD4E2E2B537C46005CD295 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E2D2B537C46005CD295 /* Location.swift */; };
+		E1DD4E362B586C4B005CD295 /* AddressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E352B586C4B005CD295 /* AddressBar.swift */; };
+		E1DD4E382B586FD2005CD295 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E372B586FD2005CD295 /* SheetView.swift */; };
+		E1DD4E3A2B5871B1005CD295 /* SuggestedRidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E392B5871B1005CD295 /* SuggestedRidesView.swift */; };
+		E1DD4E3C2B587310005CD295 /* RideOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD4E3B2B58730F005CD295 /* RideOptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E12CBB752B5B525A00B79FB8 /* MKMapRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapRect.swift; sourceTree = "<group>"; };
+		E12CBB772B5CBB2B00B79FB8 /* RideDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsModel.swift; sourceTree = "<group>"; };
+		E12CBB792B5CBED800B79FB8 /* CarSeatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarSeatType.swift; sourceTree = "<group>"; };
+		E12CBB7B2B5CBF0300B79FB8 /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
+		E12CBB7D2B5CC02800B79FB8 /* VehicleSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleSelection.swift; sourceTree = "<group>"; };
+		E12CBB7F2B5CC43100B79FB8 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		E17F66782B50C47E0085FE81 /* Marco Island Express.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marco Island Express.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17F667B2B50C47E0085FE81 /* Marco_Island_ExpressApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marco_Island_ExpressApp.swift; sourceTree = "<group>"; };
-		E17F667D2B50C47E0085FE81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E17F667F2B50C47F0085FE81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E17F66822B50C47F0085FE81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E17F66892B50C5680085FE81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E17F668C2B50C5820085FE81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E17F66982B50C8DE0085FE81 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E17F669A2B50C91A0085FE81 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E17F669C2B50CF090085FE81 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		E17F669E2B50D45E0085FE81 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		E17F66A02B5102C80085FE81 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		E17F66A22B51F2680085FE81 /* Drawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawer.swift; sourceTree = "<group>"; };
+		E17F66A42B51F4FE0085FE81 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		E17F66A62B51F5E10085FE81 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		E17F66AB2B5239400085FE81 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E17F66AD2B52394D0085FE81 /* RidesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesView.swift; sourceTree = "<group>"; };
+		E17F66AF2B5239610085FE81 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		E1DD4E0D2B530DB7005CD295 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E1DD4E112B532DE7005CD295 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		E1DD4E132B533317005CD295 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E1DD4E162B53340C005CD295 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E1DD4E182B5344A7005CD295 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		E1DD4E1A2B536F56005CD295 /* LocationSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchModel.swift; sourceTree = "<group>"; };
+		E1DD4E1C2B5370B4005CD295 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E1DD4E202B5371BC005CD295 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		E1DD4E222B5371E5005CD295 /* SearchUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserState.swift; sourceTree = "<group>"; };
+		E1DD4E252B5372B4005CD295 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
+		E1DD4E272B537587005CD295 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E1DD4E292B537615005CD295 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
+		E1DD4E2B2B5378DD005CD295 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
+		E1DD4E2D2B537C46005CD295 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		E1DD4E352B586C4B005CD295 /* AddressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBar.swift; sourceTree = "<group>"; };
+		E1DD4E372B586FD2005CD295 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		E1DD4E392B5871B1005CD295 /* SuggestedRidesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedRidesView.swift; sourceTree = "<group>"; };
+		E1DD4E3B2B58730F005CD295 /* RideOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +102,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17F66932B50C5EA0085FE81 /* FirebaseCrashlytics in Frameworks */,
+				E17F66952B50C5EA0085FE81 /* FirebaseFirestore in Frameworks */,
+				E17F66972B50C5EA0085FE81 /* FirebaseMessaging in Frameworks */,
+				E17F668F2B50C5EA0085FE81 /* FirebaseAnalytics in Frameworks */,
+				E17F66912B50C5EA0085FE81 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +133,16 @@
 			isa = PBXGroup;
 			children = (
 				E17F667B2B50C47E0085FE81 /* Marco_Island_ExpressApp.swift */,
-				E17F667D2B50C47E0085FE81 /* ContentView.swift */,
+				E1DD4E182B5344A7005CD295 /* RootView.swift */,
+				E17F66982B50C8DE0085FE81 /* HomeView.swift */,
+				E1DD4E3D2B59F746005CD295 /* Core */,
+				E17F66B22B52399B0085FE81 /* ViewModels */,
+				E17F66B12B5239720085FE81 /* CustomComponents */,
+				E1DD4E152B5333A8005CD295 /* Structs */,
+				E1DD4E0C2B530DA0005CD295 /* Extensions */,
+				E1DD4E1F2B5371A8005CD295 /* Enums */,
 				E17F667F2B50C47F0085FE81 /* Assets.xcassets */,
+				E17F668C2B50C5820085FE81 /* GoogleService-Info.plist */,
 				E17F66812B50C47F0085FE81 /* Preview Content */,
 			);
 			path = "Marco Island Express";
@@ -62,9 +151,157 @@
 		E17F66812B50C47F0085FE81 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				E17F66892B50C5680085FE81 /* GoogleService-Info.plist */,
 				E17F66822B50C47F0085FE81 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E17F66A82B52391C0085FE81 /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				E17F66AF2B5239610085FE81 /* BookView.swift */,
+				E1DD4E272B537587005CD295 /* MapView.swift */,
+				E1DD4E292B537615005CD295 /* SearchButton.swift */,
+				E1DD4E242B53729E005CD295 /* Search */,
+				E1DD4E312B586B95005CD295 /* Details */,
+				E1DD4E332B586BAB005CD295 /* Payment */,
+				E1DD4E322B586BA0005CD295 /* Review */,
+			);
+			path = Booking;
+			sourceTree = "<group>";
+		};
+		E17F66A92B5239280085FE81 /* Rides */ = {
+			isa = PBXGroup;
+			children = (
+				E17F66AD2B52394D0085FE81 /* RidesView.swift */,
+			);
+			path = Rides;
+			sourceTree = "<group>";
+		};
+		E17F66AA2B52392E0085FE81 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E17F66AB2B5239400085FE81 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E17F66B12B5239720085FE81 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E17F66A22B51F2680085FE81 /* Drawer.swift */,
+				E17F66A42B51F4FE0085FE81 /* MenuButton.swift */,
+				E17F669C2B50CF090085FE81 /* CustomTextField.swift */,
+				E17F669E2B50D45E0085FE81 /* GradientButton.swift */,
+				E1DD4E112B532DE7005CD295 /* ActionButton.swift */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		E17F66B22B52399B0085FE81 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E17F66A62B51F5E10085FE81 /* MenuModel.swift */,
+				E1DD4E132B533317005CD295 /* UserModel.swift */,
+				E1DD4E1A2B536F56005CD295 /* LocationSearchModel.swift */,
+				E12CBB772B5CBB2B00B79FB8 /* RideDetailsModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E17F66B32B5239D40085FE81 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E17F66A02B5102C80085FE81 /* SignupView.swift */,
+				E17F669A2B50C91A0085FE81 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E1DD4E0C2B530DA0005CD295 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1DD4E0D2B530DB7005CD295 /* Color.swift */,
+				E12CBB752B5B525A00B79FB8 /* MKMapRect.swift */,
+				E12CBB7F2B5CC43100B79FB8 /* Double.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1DD4E152B5333A8005CD295 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				E1DD4E162B53340C005CD295 /* User.swift */,
+				E1DD4E2D2B537C46005CD295 /* Location.swift */,
+				E12CBB7D2B5CC02800B79FB8 /* VehicleSelection.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		E1DD4E1F2B5371A8005CD295 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E1DD4E202B5371BC005CD295 /* SearchField.swift */,
+				E1DD4E222B5371E5005CD295 /* SearchUserState.swift */,
+				E1DD4E2B2B5378DD005CD295 /* MapViewState.swift */,
+				E12CBB792B5CBED800B79FB8 /* CarSeatType.swift */,
+				E12CBB7B2B5CBF0300B79FB8 /* VehicleType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E1DD4E242B53729E005CD295 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E1DD4E1C2B5370B4005CD295 /* SearchView.swift */,
+				E1DD4E252B5372B4005CD295 /* LocationSearchResultCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E1DD4E312B586B95005CD295 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				E1DD4E352B586C4B005CD295 /* AddressBar.swift */,
+				E1DD4E342B586BE8005CD295 /* Sheet */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		E1DD4E322B586BA0005CD295 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		E1DD4E332B586BAB005CD295 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		E1DD4E342B586BE8005CD295 /* Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				E1DD4E372B586FD2005CD295 /* SheetView.swift */,
+				E1DD4E392B5871B1005CD295 /* SuggestedRidesView.swift */,
+				E1DD4E3B2B58730F005CD295 /* RideOptionView.swift */,
+			);
+			path = Sheet;
+			sourceTree = "<group>";
+		};
+		E1DD4E3D2B59F746005CD295 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E17F66B32B5239D40085FE81 /* Login */,
+				E17F66A82B52391C0085FE81 /* Booking */,
+				E17F66A92B5239280085FE81 /* Rides */,
+				E17F66AA2B52392E0085FE81 /* Settings */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +320,13 @@
 			dependencies = (
 			);
 			name = "Marco Island Express";
+			packageProductDependencies = (
+				E17F668E2B50C5EA0085FE81 /* FirebaseAnalytics */,
+				E17F66902B50C5EA0085FE81 /* FirebaseAuth */,
+				E17F66922B50C5EA0085FE81 /* FirebaseCrashlytics */,
+				E17F66942B50C5EA0085FE81 /* FirebaseFirestore */,
+				E17F66962B50C5EA0085FE81 /* FirebaseMessaging */,
+			);
 			productName = "Marco Island Express";
 			productReference = E17F66782B50C47E0085FE81 /* Marco Island Express.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +355,9 @@
 				Base,
 			);
 			mainGroup = E17F666F2B50C47E0085FE81;
+			packageReferences = (
+				E17F668D2B50C5EA0085FE81 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = E17F66792B50C47E0085FE81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +374,7 @@
 			files = (
 				E17F66832B50C47F0085FE81 /* Preview Assets.xcassets in Resources */,
 				E17F66802B50C47F0085FE81 /* Assets.xcassets in Resources */,
+				E17F668A2B50C5680085FE81 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +385,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E17F667E2B50C47E0085FE81 /* ContentView.swift in Sources */,
+				E17F66A12B5102C80085FE81 /* SignupView.swift in Sources */,
+				E12CBB7A2B5CBED800B79FB8 /* CarSeatType.swift in Sources */,
+				E1DD4E1D2B5370B4005CD295 /* SearchView.swift in Sources */,
+				E17F669F2B50D45E0085FE81 /* GradientButton.swift in Sources */,
+				E1DD4E2C2B5378DD005CD295 /* MapViewState.swift in Sources */,
+				E17F66A72B51F5E10085FE81 /* MenuModel.swift in Sources */,
+				E17F66B02B5239610085FE81 /* BookView.swift in Sources */,
+				E1DD4E2E2B537C46005CD295 /* Location.swift in Sources */,
+				E1DD4E172B53340C005CD295 /* User.swift in Sources */,
+				E1DD4E212B5371BC005CD295 /* SearchField.swift in Sources */,
+				E12CBB782B5CBB2B00B79FB8 /* RideDetailsModel.swift in Sources */,
+				E1DD4E192B5344A7005CD295 /* RootView.swift in Sources */,
+				E1DD4E0E2B530DB7005CD295 /* Color.swift in Sources */,
+				E12CBB7C2B5CBF0300B79FB8 /* VehicleType.swift in Sources */,
+				E1DD4E282B537587005CD295 /* MapView.swift in Sources */,
+				E1DD4E362B586C4B005CD295 /* AddressBar.swift in Sources */,
+				E12CBB762B5B525A00B79FB8 /* MKMapRect.swift in Sources */,
+				E17F669D2B50CF090085FE81 /* CustomTextField.swift in Sources */,
+				E12CBB7E2B5CC02800B79FB8 /* VehicleSelection.swift in Sources */,
+				E17F669B2B50C91A0085FE81 /* LoginView.swift in Sources */,
+				E17F66AC2B5239400085FE81 /* SettingsView.swift in Sources */,
+				E17F66A52B51F4FE0085FE81 /* MenuButton.swift in Sources */,
+				E17F66AE2B52394D0085FE81 /* RidesView.swift in Sources */,
+				E1DD4E1B2B536F56005CD295 /* LocationSearchModel.swift in Sources */,
+				E17F66992B50C8DE0085FE81 /* HomeView.swift in Sources */,
 				E17F667C2B50C47E0085FE81 /* Marco_Island_ExpressApp.swift in Sources */,
+				E1DD4E232B5371E5005CD295 /* SearchUserState.swift in Sources */,
+				E1DD4E382B586FD2005CD295 /* SheetView.swift in Sources */,
+				E1DD4E3C2B587310005CD295 /* RideOptionView.swift in Sources */,
+				E1DD4E3A2B5871B1005CD295 /* SuggestedRidesView.swift in Sources */,
+				E17F66A32B51F2680085FE81 /* Drawer.swift in Sources */,
+				E1DD4E142B533317005CD295 /* UserModel.swift in Sources */,
+				E1DD4E122B532DE7005CD295 /* ActionButton.swift in Sources */,
+				E1DD4E262B5372B4005CD295 /* LocationSearchResultCell.swift in Sources */,
+				E12CBB802B5CC43100B79FB8 /* Double.swift in Sources */,
+				E1DD4E2A2B537615005CD295 /* SearchButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +556,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +585,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +621,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E17F668D2B50C5EA0085FE81 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E17F668E2B50C5EA0085FE81 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E17F668D2B50C5EA0085FE81 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		E17F66902B50C5EA0085FE81 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E17F668D2B50C5EA0085FE81 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E17F66922B50C5EA0085FE81 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E17F668D2B50C5EA0085FE81 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		E17F66942B50C5EA0085FE81 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E17F668D2B50C5EA0085FE81 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E17F66962B50C5EA0085FE81 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E17F668D2B50C5EA0085FE81 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E17F66702B50C47E0085FE81 /* Project object */;
 }
