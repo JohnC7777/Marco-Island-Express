@@ -40,7 +40,7 @@ struct LoginView: View {
                 }
                 .padding(.top, 20)
                 
-                GradientButton(title: "Login", icon: "arrow.right"){
+                AccentButton(title: "Login", icon: "arrow.right"){
                     login()
                 }
                 

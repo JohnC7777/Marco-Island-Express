@@ -9,9 +9,9 @@ import Foundation
 import MapKit
 import SwiftUI
 
-
-
 class LocationSearchViewModel: NSObject, ObservableObject{
+    
+    //MARK: Variables
     
     @Published var mapState = MapViewState.noInput
     @Published var results = [MKLocalSearchCompletion]()
@@ -27,15 +27,12 @@ class LocationSearchViewModel: NSObject, ObservableObject{
 
     @Published var fromQueryFragment: String = ""{
         didSet{
-            print("DEBUG: fromQueryFragment changed to -> \(fromQueryFragment)")
             searchCompleter.queryFragment = fromQueryFragment
-            print(searchCompleter)
         }
     }
     
     @Published var toQueryFragment: String = ""{
         didSet{
-            print("DEBUG: toQueryFragment changed to -> \(toQueryFragment)")
             searchCompleter.queryFragment = toQueryFragment
         }
     }
@@ -47,35 +44,40 @@ class LocationSearchViewModel: NSObject, ObservableObject{
         searchCompleter.region = MKCoordinateRegion(center: .init(latitude: 25.940666, longitude: -81.701185), latitudinalMeters: 500, longitudinalMeters: 500) //setting region to Marco Island
     }
     
+    
     //MARK: Functions
-    func selectLocations(_ pickupSearch: MKLocalSearchCompletion,_ dropoffSearch: MKLocalSearchCompletion){
+    
+    //Get location details on both of the selected searches
+    func configureSearchResultsFor(_ pickupSearch: MKLocalSearchCompletion,_ dropoffSearch: MKLocalSearchCompletion){
         locationSearch(forLocalSearchCompletion: pickupSearch){response, error in
-            self.locationSearch(forLocalSearchCompletion: dropoffSearch){response2, error2 in
+            self.locationSearch(forLocalSearchCompletion: dropoffSearch){ response2, error2 in
                 if let error = error, let error2 = error2 {
                     print("DEBUG: Location search failed with error \(error.localizedDescription), \(error2.localizedDescription)")
                     return
                 }
                 
-                guard let item = response?.mapItems.first else{return}
-                guard let item2 = response2?.mapItems.first else{return}
-                let coordinate = item.placemark.coordinate
-                let coordinate2 = item2.placemark.coordinate
-                self.fromLocation = Location(title: pickupSearch.title, subtitle: pickupSearch.subtitle, coordinate: coordinate)
-                self.toLocation = Location(title: dropoffSearch.title, subtitle: dropoffSearch.subtitle, coordinate: coordinate2)
+                //Set variables to results
+                guard let pickupMapItem = response?.mapItems.first, let dropoffMapItem = response2?.mapItems.first else{return}
+                self.fromLocation = Location(title: pickupSearch.title, subtitle: pickupSearch.subtitle, coordinate: pickupMapItem.placemark.coordinate, isAirport: response?.mapItems.first?.pointOfInterestCategory == MKPointOfInterestCategory(rawValue: "MKPOICategoryAirport"))
+                self.toLocation = Location(title: dropoffSearch.title, subtitle: dropoffSearch.subtitle, coordinate: dropoffMapItem.placemark.coordinate, isAirport: response2?.mapItems.first?.pointOfInterestCategory == MKPointOfInterestCategory(rawValue: "MKPOICategoryAirport"))
                 
-                self.fetchRoute()
+                print(self.fromLocation)
                 
-                /*self.computePrice(self.fromLocation!.coordinate.latitude, self.fromLocation!.coordinate.longitude, self.toLocation!.coordinate.latitude, self.toLocation!.coordinate.longitude){ value in
-                    DispatchQueue.main.async {
-                        //self.price = value
-                        //self.screenDisabled = false
+                //Change screen to airport confirmation or details screen
+                withAnimation{
+                    if self.fromLocation!.isAirport {
+                        self.mapState = .confirmingAirport
+                        self.cameraPosition = .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: (self.fromLocation?.coordinate.latitude)!, longitude: (self.fromLocation?.coordinate.longitude)!), latitudinalMeters: 500, longitudinalMeters: 500))
+                    } else {
+                        self.mapState = .locationConfirmed
+                        self.fetchRoute()
                     }
-                }*/
-                
+                }
             }
         }
     }
     
+    //Get location details for a specific search
     func locationSearch(forLocalSearchCompletion localSearch: MKLocalSearchCompletion,
                         completion: @escaping MKLocalSearch.CompletionHandler){
         let searchRequest = MKLocalSearch.Request()
@@ -88,6 +90,8 @@ class LocationSearchViewModel: NSObject, ObservableObject{
         search.start(completionHandler: completion)
     }
     
+    
+    //Fetch the route for the two locations
     func fetchRoute() {
         let request = MKDirections.Request()
         if let fromLocation = fromLocation, let toLocation = toLocation{
@@ -98,6 +102,7 @@ class LocationSearchViewModel: NSObject, ObservableObject{
                 let result = try? await MKDirections(request: request).calculate()
                 DispatchQueue.main.async {
                     self.route = result?.routes.first
+                    self.travelTime = result?.routes.first?.expectedTravelTime
                     withAnimation(.snappy){
                         if let rect = self.route?.polyline.boundingMapRect {
                             self.cameraPosition = .rect(rect.moveMapRect())
@@ -109,6 +114,7 @@ class LocationSearchViewModel: NSObject, ObservableObject{
         }
     }
     
+    //Reset search variables
     func resetSearch(){
         results = [MKLocalSearchCompletion]()
         (fromResult,toResult) = (MKLocalSearchCompletion(),MKLocalSearchCompletion())
@@ -118,6 +124,8 @@ class LocationSearchViewModel: NSObject, ObservableObject{
     }
     
 }
+
+//MARK: Extensions
 
 extension LocationSearchViewModel: MKLocalSearchCompleterDelegate{
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {

@@ -54,7 +54,7 @@ struct SignupView: View {
             }
             .padding(.top, 20)
             
-            GradientButton(title: "Register", icon: "arrow.right"){
+            AccentButton(title: "Register", icon: "checkmark.circle"){
                 registerUser()
             }
             

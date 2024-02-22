@@ -8,11 +8,71 @@
 import SwiftUI
 
 struct DetailsSheetView: View {
+    @EnvironmentObject var vm : RideDetailsViewModel
+    @EnvironmentObject var locationVm : LocationSearchViewModel
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment:.leading){
+            SuggestedRidesView()
+                .padding(.top)
+            
+            Divider()
+                .padding(.vertical, 5)
+            
+            HStack{
+                Text("NOTES")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .padding(.leading)
+                    .foregroundStyle(Color.theme.secondaryTextColor)
+                TextField(text: $vm.notes, label: {
+                    Text("Please enter some notes")
+                })
+                .textFieldStyle(.roundedBorder)
+                .padding(.trailing)
+            }
+            
+            HStack{
+                Text("CHILD SEAT")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .padding(.leading)
+                    .foregroundStyle(Color.theme.secondaryTextColor)
+                Picker("Car Seat Type", selection: $vm.carSeat){
+                    ForEach(CarSeatType.allCases) { seatType in
+                        Text(seatType.rawValue).tag(seatType)
+                    }
+                }
+                .foregroundStyle(Color.theme.primaryTextColor)
+            }
+            
+            DatePicker(selection: $vm.selectedDate, in: Date.now.addingTimeInterval(86400)...,label: {
+                Text("PICKUP TIME")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .padding(.leading)
+                    .foregroundStyle(Color.theme.secondaryTextColor)
+            })
+            .foregroundStyle(Color.theme.primaryTextColor)
+            .padding(.trailing)
+            
+            Divider()
+            
+            AccentButton(title:"REVIEW"){
+                withAnimation{
+                    locationVm.mapState = .review
+                }
+            }
+            .padding(.horizontal)
+            .padding(.bottom)
+        }
     }
 }
 
-#Preview {
-    DetailsSheetView()
+struct DetailsSheetView_Previews: PreviewProvider {
+    static var previews: some View {
+        let mockViewModel = RideDetailsViewModel()
+        return DetailsSheetView()
+            .environmentObject(mockViewModel)
+    }		
 }

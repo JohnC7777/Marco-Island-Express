@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SearchView: View {
     
-    @FocusState private var focusedField: SearchField?
-    @State private var whereIsUser: SearchUserState?
+    
+    @FocusState.Binding var focusedField: SearchField?
+    @Binding var whereIsUser: SearchUserState?
     @EnvironmentObject var vm : LocationSearchViewModel
     
     var body: some View {
@@ -104,8 +105,7 @@ struct SearchView: View {
                                     vm.toResult = result
                                     whereIsUser = .done
                                     withAnimation(.spring()){
-                                        vm.mapState = .locationSelected
-                                        vm.selectLocations(vm.fromResult, vm.toResult)
+                                        vm.configureSearchResultsFor(vm.fromResult, vm.toResult)
                                     }
 
                                     break
@@ -115,8 +115,7 @@ struct SearchView: View {
                                     vm.toResult = result
                                     whereIsUser = .done
                                     withAnimation(.spring()){
-                                        vm.mapState = .locationSelected
-                                        vm.selectLocations(vm.fromResult, vm.toResult)
+                                        vm.configureSearchResultsFor(vm.fromResult, vm.toResult)
                                     }
                                     break
                                     
@@ -129,13 +128,20 @@ struct SearchView: View {
             }
         }
         .background(Color.theme.backgroundColor)
-        .onAppear{
-            focusedField = .from
-            whereIsUser = .from
-        }
     }
 }
 
-#Preview {
-    SearchView()
+struct SearchView_Previews: PreviewProvider {
+    @FocusState static var focusedField: SearchField?
+    @State static var whereIsUser: SearchUserState? = nil
+    
+    static var previews: some View {
+        let mockViewModel = LocationSearchViewModel()
+
+        return SearchView(
+            focusedField: $focusedField,
+            whereIsUser: $whereIsUser
+        )
+        .environmentObject(mockViewModel)
+    }
 }

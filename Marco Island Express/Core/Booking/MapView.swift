@@ -9,7 +9,6 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.3346, longitude: -122.0090), latitudinalMeters: 10000, longitudinalMeters: 10000))
     @EnvironmentObject var vm : LocationSearchViewModel
     var body: some View {
         Map(position: $vm.cameraPosition){
@@ -22,6 +21,11 @@ struct MapView: View {
                         .tint(Color.theme.accentColor)
                     MapPolyline(route.polyline)
                         .stroke(.blue, lineWidth: 6)
+                }
+            } else if vm.mapState == .confirmingAirport {
+                if let fromLocation = vm.fromLocation{
+                    Marker(fromLocation.title, coordinate: fromLocation.coordinate)
+                        .tint(Color.theme.accentColor)
                 }
             }
         }

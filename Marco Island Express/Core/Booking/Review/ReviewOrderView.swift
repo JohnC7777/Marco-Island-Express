@@ -9,10 +9,33 @@ import SwiftUI
 
 struct ReviewOrderView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Spacer()
+            RideDetailsSubview()
+            Divider()
+            LocationDetailsSubview()
+            Divider()
+            TipSubview()
+            Divider()
+            PricesSummarySubview()
+            Spacer()
+            AccentButton(title:"Checkout"){
+                
+            }
+            .padding(.bottom)
+            .padding(.horizontal)
+        }
+        .background{
+            Color.theme.backgroundColor
+                .ignoresSafeArea()
+        }
     }
 }
 
-#Preview {
-    ReviewOrderView()
+struct ReviewOrderView_Previews: PreviewProvider {
+    static var previews: some View {
+        let mockViewModel = RideDetailsViewModel()
+        return ReviewOrderView()
+            .environmentObject(mockViewModel)
+    }
 }

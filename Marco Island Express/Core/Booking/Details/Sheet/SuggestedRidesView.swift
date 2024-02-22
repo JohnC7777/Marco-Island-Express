@@ -16,13 +16,13 @@ struct SuggestedRidesView: View {
                 .padding(.horizontal)
                 .foregroundStyle(Color.theme.secondaryTextColor)
             ScrollView(.horizontal){
-                HStack(spacing: 35){
-                    RideOptionView(myVehicle: VehicleSelection(vehicleType: .sedan, price: 80.00, passengers: 3, icon: "Tesla"))
-                    RideOptionView(myVehicle: VehicleSelection(vehicleType: .minivan, price: 90.00, passengers: 5, icon: "Tesla"))
-                    RideOptionView(myVehicle: VehicleSelection(vehicleType: .suv, price: 100.00, passengers: 6, icon: "Tesla"))
+                HStack(spacing: 10){
+                    RideOptionView(myVehicle: VehicleSelection(vehicleType: .sedan, price: 80.00, passengers: 3, icon: "Sedan"))
+                    RideOptionView(myVehicle: VehicleSelection(vehicleType: .minivan, price: 90.00, passengers: 5, icon: "Minivan"))
+                    RideOptionView(myVehicle: VehicleSelection(vehicleType: .suv, price: 100.00, passengers: 6, icon: "SUV"))
                 }
+                .padding(.leading)
             }
-            .padding(.leading)
             
         }
     }

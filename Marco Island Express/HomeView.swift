@@ -16,9 +16,7 @@ struct HomeView: View {
     
     var body: some View {
         
-        HStack(spacing: 0){
-            Drawer(animation: animation, userIsLoggedIn: $userIsLoggedIn)
-            
+        ZStack(alignment:.leading){
             TabView(selection: $menuData.selectedMenu){
                 BookView()
                     .tag("Book")
@@ -29,10 +27,23 @@ struct HomeView: View {
                 SettingsView()
                     .tag("Settings")
             }
-            .frame(width: UIScreen.main.bounds.width)
+            if menuData.showDrawer {
+                Rectangle()
+                    .opacity(0.3)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        withAnimation{
+                            menuData.showDrawer.toggle()
+                        }
+                    }
+            }
+            if menuData.showDrawer{
+                Drawer(animation: animation, userIsLoggedIn: $userIsLoggedIn)
+            }
+
         }
-        .frame(width: UIScreen.main.bounds.width)
-        .offset(x: userIsLoggedIn ? menuData.showDrawer ? 125 : -125 : 0)
+        //.frame(width: UIScreen.main.bounds.width)
+        //.offset(x: userIsLoggedIn ? menuData.showDrawer ? 125 : -125 : 0)
         .environmentObject(menuData)
         .environmentObject(userData)
         .alert("Cannot retrieve user data. Try logging in again", isPresented: $userData.showMissingUserError) {

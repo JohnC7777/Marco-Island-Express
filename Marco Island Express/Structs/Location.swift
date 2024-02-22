@@ -10,4 +10,5 @@ struct Location {
     let title: String
     let subtitle: String
     let coordinate: CLLocationCoordinate2D
+    let isAirport: Bool
 }

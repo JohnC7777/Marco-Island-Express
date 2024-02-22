@@ -22,8 +22,18 @@ struct ActionButton: View {
                     case .searchingForLocation:
                         vm.resetSearch()
                         vm.mapState = .noInput
-                    case .locationSelected, .polylineAdded:
+                    case .confirmingAirport:
                         vm.mapState = .searchingForLocation
+                    case .locationConfirmed, .polylineAdded:
+                        if let location = vm.fromLocation {
+                            if location.isAirport {
+                                vm.mapState = .confirmingAirport
+                            } else {
+                                vm.mapState = .searchingForLocation
+                            }
+                        }
+                    case .review:
+                        vm.mapState = .polylineAdded
                     }
                 }
             }

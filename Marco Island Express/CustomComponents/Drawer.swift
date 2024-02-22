@@ -88,6 +88,8 @@ struct Drawer: View {
             Color(Color.theme.backgroundColor)
                 .ignoresSafeArea(.all, edges: .vertical)
         )
+        .animation(.easeInOut)
+        .transition(.move(edge: .leading))
     }
 }
 

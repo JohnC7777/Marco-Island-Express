@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SearchButton: View {
     @EnvironmentObject var vm : LocationSearchViewModel
+    @FocusState.Binding var focusedField: SearchField?
+    @Binding var whereIsUser: SearchUserState?
     var body: some View {
         HStack{
             Image(systemName: "magnifyingglass")
@@ -28,10 +30,9 @@ struct SearchButton: View {
             withAnimation{
                 vm.mapState = .searchingForLocation
             }
+            focusedField = .from
+            whereIsUser = .from
         }
     }
 }
 
-#Preview {
-    SearchButton()
-}

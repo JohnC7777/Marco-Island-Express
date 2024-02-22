@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct GradientButton: View {
+struct AccentButton: View {
     var title: String
-    var icon: String
+    var icon: String?
     var onClick: () -> ()
     var body: some View {
         Button(action: onClick, label: {
             HStack(spacing: 15){
                 Spacer()
                 Text(title)
-                Image(systemName: icon)
+                if let icon = icon{ Image(systemName: icon) }
                 Spacer()
             }
             .fontWeight(.bold)
@@ -25,7 +25,7 @@ struct GradientButton: View {
             .padding(.horizontal, 35)
             .background{
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundStyle(.linearGradient(colors: [Color.theme.accentColor, .green], startPoint: .top, endPoint: .bottom))
+                    .foregroundStyle(Color.theme.accentColor)
             }
             
         })
