@@ -10,9 +10,6 @@ import Firebase
 
 struct RootView: View {
     @State private var userIsLoggedIn = false
-    init() {
-        UITabBar.appearance().isHidden = true
-    }
     var body: some View {
         VStack{
             if userIsLoggedIn{

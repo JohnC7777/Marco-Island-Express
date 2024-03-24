@@ -10,41 +10,31 @@ import Firebase
 
 struct HomeView: View {
     @Binding var userIsLoggedIn : Bool
-    @StateObject var menuData = MenuViewModel()
     @StateObject var userData = UserViewModel()
-    @Namespace var animation
     
     var body: some View {
         
         ZStack(alignment:.leading){
-            TabView(selection: $menuData.selectedMenu){
+            TabView(selection: .constant("Book")){
                 BookView()
-                    .tag("Book")
+                    .tabItem{
+                        Image(systemName: "map")
+                        Text("Book")
+                    }
                 
                 RidesView()
-                    .tag("Rides")
+                    .tabItem{
+                        Image(systemName: "car")
+                        Text("Rides")
+                    }
                 
                 SettingsView()
-                    .tag("Settings")
-            }
-            if menuData.showDrawer {
-                Rectangle()
-                    .opacity(0.3)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        withAnimation{
-                            menuData.showDrawer.toggle()
-                        }
+                    .tabItem{
+                        Image(systemName: "gear")
+                        Text("Settings")
                     }
             }
-            if menuData.showDrawer{
-                Drawer(animation: animation, userIsLoggedIn: $userIsLoggedIn)
-            }
-
         }
-        //.frame(width: UIScreen.main.bounds.width)
-        //.offset(x: userIsLoggedIn ? menuData.showDrawer ? 125 : -125 : 0)
-        .environmentObject(menuData)
         .environmentObject(userData)
         .alert("Cannot retrieve user data. Try logging in again", isPresented: $userData.showMissingUserError) {
             Button("OK") {

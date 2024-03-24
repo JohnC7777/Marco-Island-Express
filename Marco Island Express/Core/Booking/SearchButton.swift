@@ -24,8 +24,7 @@ struct SearchButton: View {
                 .foregroundStyle(Color.theme.secondaryBackgroundColor)
                 .shadow(color:Color.theme.backgroundColor,radius: 2)
         }
-        .padding(.trailing)
-        .padding(.leading, 5)
+        .padding(.horizontal)
         .onTapGesture {
             withAnimation{
                 vm.mapState = .searchingForLocation

@@ -14,14 +14,12 @@ struct MenuButton: View {
     @Binding var selectedMenu : String
     var animation : Namespace.ID
     @Binding var userIsLoggedIn : Bool
-    @EnvironmentObject var menuData: MenuViewModel
     var body: some View {
         Button(action: {
             if name == "Logout"{
                 print("Attempting logout")
                 do {
                     try Auth.auth().signOut()
-                    menuData.showDrawer=false
                     withAnimation{
                         userIsLoggedIn = false
                     }

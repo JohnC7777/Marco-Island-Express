@@ -13,7 +13,6 @@ struct BookView: View {
     @State private var whereIsUser: SearchUserState?
     @StateObject var vm = LocationSearchViewModel()
     @StateObject var detailsViewModel = RideDetailsViewModel()
-    @EnvironmentObject var menuData: MenuViewModel
     var body: some View {
         ZStack (alignment: .center){
             MapView()
@@ -42,7 +41,9 @@ struct BookView: View {
         .overlay(
             ZStack{
                 HStack(alignment: .center, spacing: 0){
-                    ActionButton()
+                    if vm.mapState != .noInput {
+                        ActionButton()
+                    }
                     if vm.mapState == .noInput {
                         SearchButton(focusedField: $focusedField, whereIsUser: $whereIsUser)
                     }

@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct ActionButton: View {
-    @EnvironmentObject var menuData: MenuViewModel
     @EnvironmentObject var vm : LocationSearchViewModel
     var body: some View {
-        Image(systemName: (vm.mapState == .noInput) ? "line.3.horizontal" : "arrow.left")
+        Image(systemName:"arrow.left")
             .font(.system(size: vm.mapState == .searchingForLocation ? 20 : 25))
             .padding()
             .onTapGesture {
                 withAnimation(.easeInOut(duration: 0.2)){
                     switch vm.mapState {
                     case .noInput:
-                        menuData.showDrawer.toggle()
+                        break
                     case .searchingForLocation:
                         vm.resetSearch()
                         vm.mapState = .noInput
