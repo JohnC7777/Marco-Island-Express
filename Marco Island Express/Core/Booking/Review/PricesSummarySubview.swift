@@ -14,7 +14,6 @@ struct PricesSummarySubview: View {
             PriceNameAndAmountView(name: "Ride Fee", amount: 80.00)
             PriceNameAndAmountView(name: "Tip Amount", amount: vm.tipAmount ?? 0.0)
             PriceNameAndAmountView(name: "Credit Card Fee", amount: 3.00)
-            if vm.carSeat != .none {PriceNameAndAmountView(name: "Car Seat Fee", amount: 5.00)}
             PriceNameAndAmountView(name: "Sales Tax", amount: 8.00)
             Divider()
             PriceNameAndAmountView(name: "Total Amount", amount: 117.00)

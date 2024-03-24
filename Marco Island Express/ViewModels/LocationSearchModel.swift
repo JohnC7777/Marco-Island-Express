@@ -22,6 +22,8 @@ class LocationSearchViewModel: NSObject, ObservableObject{
     @Published var travelTime : Double?
     @Published var route : MKRoute?
     @Published var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 25.940666, longitude: -81.701185), latitudinalMeters: 10000, longitudinalMeters: 10000))
+    @Published var showingInvalidAlert : Bool = false
+    @Published var price : Double?
     
     private let searchCompleter = MKLocalSearchCompleter()
 
@@ -63,6 +65,12 @@ class LocationSearchViewModel: NSObject, ObservableObject{
                 
                 print(self.fromLocation)
                 
+                
+                self.computePrice { price in
+                    DispatchQueue.main.async {
+                        self.price = price //TODO: price is different for other car types. 
+                    }
+                }
                 //Change screen to airport confirmation or details screen
                 withAnimation{
                     if self.fromLocation!.isAirport {
@@ -112,6 +120,48 @@ class LocationSearchViewModel: NSObject, ObservableObject{
                 }
             }
         }
+    }
+    
+    func computePrice(completion: @escaping (Double?) -> Void){
+        let url = URL(string:"https://marco-island-express.glitch.me/calculate-price")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        print("fromLat: \(self.fromLocation!.coordinate.latitude)    fromLon: \(self.fromLocation!.coordinate.longitude)   toLat: \(self.toLocation!.coordinate.latitude)    toLon: \(self.toLocation!.coordinate.longitude)")
+        let body = [
+            "from": [
+                "latitude": self.fromLocation!.coordinate.latitude,
+                "longitude": self.fromLocation!.coordinate.longitude
+            ],
+            "to": [
+                "latitude": self.toLocation!.coordinate.latitude,
+                "longitude": self.toLocation!.coordinate.longitude
+            ]
+        ]
+        let jsonData = try? JSONSerialization.data(withJSONObject: body)
+        request.httpBody = jsonData
+        
+        URLSession.shared.dataTask(with: request){ data, response, error in
+            guard let data = data, error == nil,
+                  (response as? HTTPURLResponse)?.statusCode == 200
+            else{
+                completion(nil)
+                return
+            }
+            
+            //Decode JSON response
+            do {
+                let decoder = JSONDecoder()
+                let response1 = try decoder.decode(PriceResponse.self, from: data)
+                completion(response1.priceSedan)
+            } catch {
+                DispatchQueue.main.async {
+                    self.showingInvalidAlert = true
+                }
+                print("THE ERROR IS \(error.localizedDescription)")
+            }
+            
+        }.resume()
     }
     
     //Reset search variables

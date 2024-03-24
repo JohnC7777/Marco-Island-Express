@@ -10,7 +10,7 @@ import Foundation
 extension Date {
     func showTime() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "h:mma" // You can adjust the date format as needed
+        dateFormatter.dateFormat = "h:mma" // Format for Time
         return dateFormatter.string(from: self)
     }
 }

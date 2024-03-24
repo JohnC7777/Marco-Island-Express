@@ -32,20 +32,6 @@ struct DetailsSheetView: View {
                 .padding(.trailing)
             }
             
-            HStack{
-                Text("CHILD SEAT")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .padding(.leading)
-                    .foregroundStyle(Color.theme.secondaryTextColor)
-                Picker("Car Seat Type", selection: $vm.carSeat){
-                    ForEach(CarSeatType.allCases) { seatType in
-                        Text(seatType.rawValue).tag(seatType)
-                    }
-                }
-                .foregroundStyle(Color.theme.primaryTextColor)
-            }
-            
             DatePicker(selection: $vm.selectedDate, in: Date.now.addingTimeInterval(86400)...,label: {
                 Text("PICKUP TIME")
                     .font(.subheadline)

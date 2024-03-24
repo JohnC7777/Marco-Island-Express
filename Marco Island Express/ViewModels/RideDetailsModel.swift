@@ -11,7 +11,6 @@ import SwiftUI
 class RideDetailsViewModel: ObservableObject {
     
     @Published var notes = ""
-    @Published var carSeat : CarSeatType = .none
     @Published var selectedDate = Date.now
     @Published var showDatePicker = false
     @Published var selectedVehicle : VehicleType = .sedan

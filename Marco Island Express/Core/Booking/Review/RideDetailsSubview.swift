@@ -28,8 +28,6 @@ struct MiniDetailView: View {
     var body: some View{
         HStack{
             Image(systemName:icon)
-                .resizable()
-                .frame(width: 30, height: 30)
                 .foregroundStyle(Color.theme.primaryTextColor)
 
             VStack(alignment:.leading){

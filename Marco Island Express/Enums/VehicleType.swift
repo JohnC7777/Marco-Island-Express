@@ -9,7 +9,6 @@ import Foundation
 
 enum VehicleType: String, Identifiable {
     case sedan = "Sedan"
-    case minivan = "Minivan"
     case suv = "Full Size SUV"
 
     var id: String { self.rawValue }

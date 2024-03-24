@@ -30,6 +30,14 @@ struct BookView: View {
             }
             
         }
+        .alert("Sorry we do not currently drive the selected route. Contact us to get a quote.",isPresented: $vm.showingInvalidAlert){
+            Button("OK", role: .cancel) {
+                vm.price = nil
+                vm.toLocation = nil
+                vm.fromLocation = nil
+                vm.mapState = .searchingForLocation
+            }
+        }
         .ignoresSafeArea(edges: .bottom)
         .overlay(
             ZStack{
