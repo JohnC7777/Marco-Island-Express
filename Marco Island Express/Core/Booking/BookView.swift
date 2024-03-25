@@ -54,6 +54,7 @@ struct BookView: View {
                 
             }, alignment: .topLeading
         )
+        .toolbar(vm.mapState == .noInput ? .visible : .hidden, for: .tabBar)
         .environmentObject(vm)
         .environmentObject(detailsViewModel)
     }

@@ -34,6 +34,7 @@ struct HomeView: View {
                         Text("Settings")
                     }
             }
+
         }
         .environmentObject(userData)
         .alert("Cannot retrieve user data. Try logging in again", isPresented: $userData.showMissingUserError) {

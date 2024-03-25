@@ -15,6 +15,7 @@
 		E13EA77B2BAFB72B00FD3533 /* RideDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13EA77A2BAFB72A00FD3533 /* RideDetailView.swift */; };
 		E13EA77D2BAFB77100FD3533 /* RideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13EA77C2BAFB77100FD3533 /* RideCell.swift */; };
 		E13EA77F2BAFB7AF00FD3533 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13EA77E2BAFB7AF00FD3533 /* Ride.swift */; };
+		E13EA7812BB0DFCE00FD3533 /* RidesPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13EA7802BB0DFCE00FD3533 /* RidesPicker.swift */; };
 		E17E35F02B9CDA3C0054AA2D /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = E17E35EF2B9CDA3C0054AA2D /* Stripe */; };
 		E17E35F22B9CDA3C0054AA2D /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = E17E35F12B9CDA3C0054AA2D /* StripePaymentSheet */; };
 		E17E35F42B9CDA3C0054AA2D /* StripePayments in Frameworks */ = {isa = PBXBuildFile; productRef = E17E35F32B9CDA3C0054AA2D /* StripePayments */; };
@@ -77,6 +78,7 @@
 		E13EA77A2BAFB72A00FD3533 /* RideDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailView.swift; sourceTree = "<group>"; };
 		E13EA77C2BAFB77100FD3533 /* RideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideCell.swift; sourceTree = "<group>"; };
 		E13EA77E2BAFB7AF00FD3533 /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		E13EA7802BB0DFCE00FD3533 /* RidesPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesPicker.swift; sourceTree = "<group>"; };
 		E17E35FB2B9CE2C60054AA2D /* StripeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeModel.swift; sourceTree = "<group>"; };
 		E17E35FD2B9CF7860054AA2D /* PriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
 		E17F66782B50C47E0085FE81 /* Marco Island Express.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marco Island Express.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +228,7 @@
 				E17F669E2B50D45E0085FE81 /* AccentButton.swift */,
 				E1DD4E112B532DE7005CD295 /* ActionButton.swift */,
 				E1EB91682B75B0D8008558F8 /* TipPicker.swift */,
+				E13EA7802BB0DFCE00FD3533 /* RidesPicker.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13EA77B2BAFB72B00FD3533 /* RideDetailView.swift in Sources */,
+				E13EA7812BB0DFCE00FD3533 /* RidesPicker.swift in Sources */,
 				E17F66A12B5102C80085FE81 /* SignupView.swift in Sources */,
 				E1DD4E1D2B5370B4005CD295 /* SearchView.swift in Sources */,
 				E17F669F2B50D45E0085FE81 /* AccentButton.swift in Sources */,
