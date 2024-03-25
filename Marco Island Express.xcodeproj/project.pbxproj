@@ -79,6 +79,7 @@
 		E13EA77C2BAFB77100FD3533 /* RideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideCell.swift; sourceTree = "<group>"; };
 		E13EA77E2BAFB7AF00FD3533 /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		E13EA7802BB0DFCE00FD3533 /* RidesPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesPicker.swift; sourceTree = "<group>"; };
+		E13EA7842BB10B9E00FD3533 /* Marco-Island-Express-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Marco-Island-Express-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E17E35FB2B9CE2C60054AA2D /* StripeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeModel.swift; sourceTree = "<group>"; };
 		E17E35FD2B9CF7860054AA2D /* PriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
 		E17F66782B50C47E0085FE81 /* Marco Island Express.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marco Island Express.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +165,7 @@
 		E17F667A2B50C47E0085FE81 /* Marco Island Express */ = {
 			isa = PBXGroup;
 			children = (
+				E13EA7842BB10B9E00FD3533 /* Marco-Island-Express-Info.plist */,
 				E17F667B2B50C47E0085FE81 /* Marco_Island_ExpressApp.swift */,
 				E1DD4E182B5344A7005CD295 /* RootView.swift */,
 				E17F66982B50C8DE0085FE81 /* HomeView.swift */,
@@ -604,9 +606,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Marco Island Express/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Marco-Island-Express-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -633,9 +635,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Marco Island Express/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Marco-Island-Express-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
