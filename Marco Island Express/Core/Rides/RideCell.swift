@@ -14,7 +14,6 @@ struct RideCell: View {
             VStack(alignment:.leading){
                 
                 MiniDetailView(title: "Date", value: ride.pickupTime.showDateAndYear(), icon: "car.fill")
-                    .padding(.leading)
                 
                 Divider()
                 
@@ -29,6 +28,7 @@ struct RideCell: View {
                 MiniLocationDetailView(icon: "mappin.circle", title:ride.toTitle, subtitle:ride.toSubtitle, time:ride.pickupTime.addingTimeInterval(ride.travelTime))
                 
             }
+            .padding(.leading)
             Image(systemName: "chevron.right")
                 .padding(.trailing)
                 .foregroundColor(.gray)

@@ -22,6 +22,7 @@ struct LocationDetailsSubview: View {
             
             MiniLocationDetailView(icon: "mappin.circle", title:vm.toLocation?.title ?? "", subtitle:vm.toLocation?.subtitle ?? "", time: detailsViewModel.selectedDate.addingTimeInterval(vm.travelTime ?? 0))
         }
+        .padding(.horizontal)
     }
 }
 
@@ -33,6 +34,7 @@ struct MiniLocationDetailView: View {
     var body: some View {
         HStack{
             Image(systemName:icon)
+                .foregroundStyle(Color.theme.accentColor)
             VStack(alignment:.leading){
                 Text(title)
                     .foregroundStyle(Color.theme.primaryTextColor)
@@ -45,7 +47,6 @@ struct MiniLocationDetailView: View {
             Text(time.showTime())
                 .foregroundStyle(Color.theme.secondaryTextColor)
         }
-        .padding(.horizontal)
     }	
 }
 

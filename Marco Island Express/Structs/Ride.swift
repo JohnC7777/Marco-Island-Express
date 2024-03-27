@@ -11,10 +11,12 @@ import MapKit
 struct Ride: Identifiable, Hashable {
     
     var id: String
-    var driverFirstName: String //Add optional for the driver information?
-    var driverID: String
-    var driverLastName: String
-    var driverPhone: String
+    var driverFirstName: String?
+    var driverID: String?
+    var driverLastName: String?
+    var driverPhone: String?
+    var airline: String?
+    var flightNumber: String?
     var fromSubtitle: String
     var fromTitle: String
     var fromLat: CLLocationDegrees
@@ -35,7 +37,7 @@ struct Ride: Identifiable, Hashable {
     var status: String //Can we make this an enum?
     var toSubtitle: String
     var toTitle: String
-    var requesterFcmToken: String // Optional?
+    var requesterFcmToken: String? // Optional?
     var driverPaid: Bool //Should we have this?
     var platform: String //Can we make this an enum?
     

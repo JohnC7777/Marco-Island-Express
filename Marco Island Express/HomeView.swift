@@ -28,10 +28,10 @@ struct HomeView: View {
                         Text("Rides")
                     }
                 
-                SettingsView()
+                SettingsView(userIsLoggedIn: $userIsLoggedIn)
                     .tabItem{
-                        Image(systemName: "gear")
-                        Text("Settings")
+                        Image(systemName: "person")
+                        Text("Account")
                     }
             }
 

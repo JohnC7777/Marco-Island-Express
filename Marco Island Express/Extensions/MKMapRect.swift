@@ -16,8 +16,9 @@ extension MKMapRect {
         let newHeight = heightPadding + self.size.height
 
         let newOriginX = self.origin.x - (widthPadding/2)
-        let newOriginY = self.origin.y - (heightPadding/2) + 161000
+        let newOriginY = self.origin.y - (heightPadding/2)// + 161000
         
         return MKMapRect(x: newOriginX, y: newOriginY, width: newWidth, height: newHeight)
     }
 }
+

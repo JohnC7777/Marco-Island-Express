@@ -18,7 +18,7 @@ class UserViewModel: ObservableObject {
         fetchUserDetails()
     }
     
-    func fetchUserDetails() {
+    func fetchUserDetails(){
         let db = Firestore.firestore()
         let ref = db.collection("User").document("\(Auth.auth().currentUser!.uid)")
         ref.getDocument { (document, error) in
@@ -31,6 +31,15 @@ class UserViewModel: ObservableObject {
             } else {
                 self.showMissingUserError = true
             }
+        }
+    }
+    
+    func logout(){
+        //TODO: Remove fcm token for this user in database
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print(error.localizedDescription)
         }
     }
 }
